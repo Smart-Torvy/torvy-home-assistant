@@ -1,0 +1,12 @@
+alias: "PC Off at Bedtime"
+trigger:
+  platform: state
+  entity_id: input_select.ben_status
+  state: "sleeping"
+condition:
+  - platform: state
+    entity_id: input_select.lock_pc
+    state: "disabled"
+action:
+  service: switch.turn_off
+  entity_id: switch.pc_power

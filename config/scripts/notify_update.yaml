@@ -1,0 +1,8 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: UPDATE
+    message: "New Home Assistant update availible."
+- execute_service: notify.notify
+  service_data:
+    message: "There is a new Home Assistant update availible."

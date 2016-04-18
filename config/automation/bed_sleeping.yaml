@@ -1,0 +1,11 @@
+alias: "Ben Bed Time"
+trigger:
+  platform: state
+  entity_id: input_select.ben_status
+  state: "sleeping"
+condition:
+  platform: state
+  entity_id: input_select.company
+  state: "disabled"
+action:
+  service: script.bedtime_ben

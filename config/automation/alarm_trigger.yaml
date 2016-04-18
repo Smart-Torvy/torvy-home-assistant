@@ -1,0 +1,14 @@
+alias: "Alarm Trigger"
+trigger:
+  - platform: state
+    entity_id: sensor.lr_motion
+    state: "motion detected"
+  - platform: state
+    entity_id: sensor.br_motion
+    state: "motion detected"
+condition:
+  - platform: state
+    entity_id: alarm_control_panel.alarm
+    state: "armed_away"
+action:
+  service: script.alarm_triggered

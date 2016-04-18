@@ -1,0 +1,82 @@
+sequence:
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    transition: 1
+    rgb_color: [255,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    transition: 1
+    rgb_color: [255,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_lifx
+    transition: 1
+    rgb_color: [255,0,255]
+    brightness: 255
+- delay:
+    seconds: 1
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    transition: 1
+    rgb_color: [255,0,0]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    transition: 1
+    rgb_color: [255,0,0]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_lifx
+    transition: 1
+    rgb_color: [255,0,0]
+    brightness: 255
+- delay:
+    seconds: 1
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    transition: 1
+    rgb_color: [0,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    transition: 1
+    rgb_color: [0,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_lifx
+    transition: 1
+    rgb_color: [0,0,255]
+    brightness: 255
+- delay:
+    seconds: 1
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    transition: 1
+    rgb_color: [0,255,0]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    transition: 1
+    rgb_color: [0,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_lifx
+    transition: 1
+    rgb_color: [0,255,0]
+    brightness: 255
+  delay:
+    seconds: 1
+- execute_service: script.party_lights_2

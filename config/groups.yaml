@@ -1,0 +1,217 @@
+default_view:
+  view: yes
+  entities:
+    - group.alarm_status
+    - group.bathroom
+    - group.bedroom
+    - group.cameras
+    - group.living_room
+    - group.kitchen
+    - group.rfblinds
+    - device_tracker.bruh2_ben6p
+    - device_tracker.bruh2_cailin6p
+
+alarm:
+  name: Alarm
+  view: yes
+  entities:
+    - group.alarm_status
+    - group.cameras
+    - group.party
+
+blinds:
+  name: blinds
+  view: yes
+  entities:
+    - group.rfblinds
+
+environment:
+  name: environment
+  view: yes
+  entities:
+    - group.temperature
+    - group.humidity
+    - group.light
+    - group.sound
+    - group.weather
+
+Family:
+  name: family
+  view: yes
+  entities:
+    - group.ben
+    - group.cailin
+    - device_tracker.bruh2_ben6p
+    - device_tracker.bruh2_cailin6p
+
+lights:
+  name: lights
+  view: yes
+  entities:
+    - group.bathroom
+    - group.bedroom
+    - group.living_room
+    - group.kitchen
+
+media:
+  name: media
+  view: yes
+  entities:
+    - group.devices
+
+scenes:
+  name: Scenes
+  view: yes
+  entities:
+    - group.global
+ 
+ha_status:
+  name: HA Controls
+  view: yes
+  entities:
+    - group.home_assistant_status
+    - group.speedtest
+    - group.lockouts
+
+####GROUPS####
+Alarm Status:
+    - input_boolean.notify_home
+    - alarm_control_panel.alarm
+    - sensor.br_motion
+    - sensor.lr_motion
+    - scene.lifx_alert
+
+HA Status:
+    - script.restart_ha
+    - sensor.cpu_use
+    - sensor.ram_free
+    - sensor.disk_free_home
+    - sensor.last_boot
+
+Bedroom:
+    - switch.bedroom_fan
+    - switch.bedroom_lamp
+    - light.bedroom_color_lifx
+    - light.br_lifx
+    - switch.bedroom_lifx
+    - light.br_node_led
+
+RFBlinds: 
+    - switch.bedroom_blinds
+    - switch.kitchen_blinds
+    - switch.livingroom_blinds
+
+Cameras:
+    - camera.front_door
+    - camera.porch
+
+Ben:
+    - script.refresh_devices
+    - switch.br_finder
+    - input_select.ben_status
+    - sensor.ben_destination
+    - sensor.ben_eta
+    - sensor.ben_nexus_6p_battery
+
+Cailin:
+    - script.refresh_devices
+    - switch.cr_finder
+    - input_select.cailin_status
+    - sensor.cailin_destination
+    - sensor.cailin_eta
+    - sensor.cailin_nexus_6p_battery
+
+Global:
+    - script.all_off
+    - script.all_on
+    - script.sexy_time
+    - script.alarmred
+    - script.party_time
+    - script.party_over
+
+Home Assistant Status:
+    - script.restart_ha
+    - sensor.cpu_use
+    - sensor.ram_free
+    - sensor.disk_free_home
+    - sensor.last_boot
+
+Humidity:
+   - sensor.weather_humidity
+   - sensor.lr_humidity
+   - sensor.br_humidity
+ 
+Kitchen Lights:
+    - switch.kitchen_outlet
+   
+Light:
+   - sensor.br_light
+   - sensor.lr_light
+
+Party:
+   - light.party_button
+   - sensor.party_button
+   - switch.livingroom_desk_outlet
+ 
+Sound:
+   - sensor.br_last_sound
+   - sensor.br_clap_sound
+
+Speedtest:
+   - sensor.speedtest_ping
+   - sensor.speedtest_download
+   - sensor.speedtest_upload
+
+Living Room:
+    - light.lr_door_color_lifx
+    - light.lr_fireplace_color_lifx
+    - input_select.hyperion_effect
+    - light.rp2
+    - light.jar_led
+    - switch.livingroom_wall_outlet
+
+Bathroom:
+    - switch.wemo_insight_5050_led
+    - light.bathroom_led
+
+Lockouts:
+    - input_select.company
+    - input_select.lock_pc
+    - input_select.media_lockout
+
+Devices:
+    - switch.pc_power
+    - switch.tv_power
+    - switch.avr_power
+    - switch.tv_input
+    - scene.vol_up
+    - scene.vol_down
+    - media_player.bcrcc
+    - media_player.kodi_cmstormtrooper
+    - media_player.openelec
+    - media_player.osmc
+
+Weather:
+   - sensor.date__time
+   - sensor.weather_icon
+   - sensor.weather_condition
+   - sensor.weather_summary
+   - sun.sun
+   - sensor.weather_cloud_coverage
+   - sensor.weather_dew_point
+   - sensor.weather_ozone
+   - sensor.weather_precip_type
+   - sensor.weather_precip_probability
+   - sensor.weather_precip
+   - sensor.weather_precip_intensity
+   - sensor.weather_pressure
+   - sensor.weather_visibility
+   - sensor.weather_nearest_storm_distance
+   - sensor.weather_wind_bearing
+   - sensor.weather_wind_speed
+
+Temperature:
+   - sensor.weather_temperature
+   - sensor.weather_apparent_temperature
+   - sensor.br_temperature
+   - sensor.lr_temperature

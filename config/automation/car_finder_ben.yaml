@@ -1,0 +1,18 @@
+alias: "Ben Car Finder"
+trigger:
+  platform: state
+  entity_id: input_select.ben_status
+  from: "driving"
+  to: "standby"
+  for:
+    seconds: 10
+action:
+  service_template: mqtt.publish
+  data_template:
+    topic: >
+      {% if is_state('sensor.car_driving_ben', 'Prius') %}
+        owntracks/bruh2/prius
+      {% elif is_state('sensor.car_driving_ben', 'Civic')%}
+        owntracks/bruh2/civic
+      {% endif %}
+    payload_template: '{"_type":"location","lat":{{states.device_tracker.bruh2_ben6p.attributes.latitude}},"lon":{{ states.device_tracker.bruh2_ben6p.attributes.longitude}},"tst":1234,"acc":{{states.device_tracker.bruh2_ben6p.attributes.gps_accuracy}}}'

@@ -1,0 +1,11 @@
+alias: "clap bedtime"
+trigger:
+  - platform: state
+    entity_id: sensor.br_clap_sound
+    state: "double clap"
+condition:
+  - platform: state
+    entity_id: sun.sun
+    state: "below_horizon"
+action:
+  service: script.bedtime_ben

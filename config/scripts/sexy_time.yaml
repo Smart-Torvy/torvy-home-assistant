@@ -1,0 +1,31 @@
+sequence:
+- execute_service: script.all_off
+- delay:
+    seconds: 3
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: group.rfblinds
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    brightness: 50
+    color_temp: 233
+    rgb_color: [255,255,255]
+    transition: 2
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    brightness: 50
+    color_temp: 233
+    rgb_color: [255,255,255]
+    transition: 2
+- delay:
+    seconds: 1
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_lifx
+    brightness: 50
+    color_temp: 233
+    rgb_color: [255,255,255]
+    transition: 2
+- execute_service: shell_command.sexy_time

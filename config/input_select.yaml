@@ -1,0 +1,55 @@
+ben_status:
+  name: Ben Status
+  options:
+   - driving
+   - standby
+   - sleeping
+  initial: standby
+
+cailin_status:
+  name: Cailin Status
+  options:
+   - driving
+   - standby
+   - sleeping
+  initial: standby
+
+company:
+  name: "Company"
+  options:
+   - "enabled"
+   - "disabled"
+  initial: "disabled"
+
+media_lockout:
+  name: "Media Automation"
+  options:
+   - "enabled"
+   - "disabled"
+  initial: "disabled"
+
+lock_pc:
+  name: "PC Power"
+  options:
+   - "enabled"
+   - "disabled"
+  initial: "disabled"
+
+hyperion_effect:
+  name: Hyperion Effect
+  options:
+   - "Knight Rider"
+   - "Mood Blobs Blue"
+   - "Mood Blobs Cold"
+   - "Mood Blobs Full Color"
+   - "Mood Blobs Green"
+   - "Mood Blobs Rainbow"
+   - "Mood Blobs Red"
+   - "Mood Blobs Warm"
+   - "Off"
+   - "Rainbow Swirl"
+   - "Snake"
+   - "Strobe Blue"
+   - "Strobe Raspberry"
+   - "Strobe White"
+  initial: "Off"

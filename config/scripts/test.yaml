@@ -1,0 +1,51 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: EVENT
+    message: Test Script
+- execute_service: notify.notify
+  service_data:
+    message: "TEST"
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.jar_led
+    rgb_color: [0,255,0]
+- delay:
+    seconds: 1
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.jar_led
+- delay:
+    seconds: 1
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.jar_led
+    rgb_color: [0,255,0]
+- delay:
+    seconds: 1
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.jar_led
+- delay:
+    seconds: 1
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.jar_led
+    rgb_color: [0,255,0]
+- delay:
+    seconds: 1
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.jar_led
+#  test2:
+#  alias:  Test Script 2
+#sequence:
+#- event: LOGBOOK_ENTRY
+#  event_data:
+#    name: EVENT
+#    message: Test Script 2
+#  - alias: Pushbullet test
+#- execute_service: notify.notify
+#  service_data:
+#    message: "{% if states('sensor.ben_nexus_6p_battery') > '6'%}Low battery detected! Ben's battery is at {{states('sensor.ben_nexus_6p_battery')}}%{% else %} {% endif %} {% if states('sensor.cailin_nexus_6p_battery') < '6'%}Low battery detected! Cailin's battery is at {{states('sensor.cailin_nexus_6p_battery')}}%{% else %} {% endif %}"
+

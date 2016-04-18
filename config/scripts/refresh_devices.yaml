@@ -1,0 +1,3 @@
+sequence:
+- execute_service: shell_command.ben6p_update
+- execute_service: shell_command.cailin6p_update

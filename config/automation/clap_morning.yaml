@@ -1,0 +1,11 @@
+alias: "clap morning"
+trigger:
+  - platform: state
+    entity_id: sensor.br_clap_sound
+    state: "double clap"
+condition:
+  - platform: state
+    entity_id: sun.sun
+    state: "above_horizon"
+action:
+  service: script.morning

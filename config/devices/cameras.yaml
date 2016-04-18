@@ -1,0 +1,11 @@
+- platform: mjpeg
+  mjpeg_url: http://192.XXX.XXX.XXX:XXX/videostream.cgi
+  name: Front Door
+  username: XXXXXXX
+  password: XXXXXXX
+##CAMERA 2
+- platform: mjpeg
+  mjpeg_url: http://192..XXX.XXX.XXX:XXX/videostream.cgi
+  name: Porch
+  username: XXXXXXXX
+  password: XXXXXXX

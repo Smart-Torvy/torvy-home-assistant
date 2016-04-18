@@ -1,0 +1,10 @@
+alias: "Sunrise blinds open"
+trigger:
+  platform: sun
+  event: sunrise
+condition:
+  platform: state
+  entity_id: input_select.company
+  state: "disabled"
+action:
+  service: script.sunrise

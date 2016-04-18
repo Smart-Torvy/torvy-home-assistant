@@ -1,0 +1,51 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: Ben
+    message: is going to bed
+    entity_id: device_tracker.bruh2_ben6p
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: switch.bedroom_lamp
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_lifx
+    transition: 30
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    transition: 30
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    transition: 30
+- execute_service: switch.turn_on
+  service_data:
+    entity_id: switch.bedroom_fan
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: switch.livingroom_wall_outlet
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: switch.livingroom_desk_outlet
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: switch.wemo_insight_5050_led
+- execute_service: input_select.select_option
+  service_data:
+    entity_id: input_select.hyperion_effect
+    option: "Off"
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.rp2
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: switch.tv_power
+- execute_service: notify.notify
+  service_data:
+    message: "Ben is going to bed!"
+- delay:
+    seconds: 15
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_node_led

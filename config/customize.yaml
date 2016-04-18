@@ -1,0 +1,323 @@
+########CUSTOMIZE DEVICES########
+     device_tracker.bruh2_cailin6p:
+        entity_picture: https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xat1/t31.0-8/1654585_10155774155960164_4241292795035795981_o.jpg
+        friendly_name: Cailin
+     device_tracker.bruh2_ben6p:
+        entity_picture: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/005/02f/272/1939778.jpg
+        friendly_name: Ben
+     device_tracker.ben_car:
+        icon: mdi:car
+        friendly_name: Prius
+     device_tracker.cailin_car:
+        icon: mdi:car
+        friendly_name: Civic
+
+######CUSTOMIZE MEDIA PLAYERS######
+     media_player.bcrcc:
+        friendly_name: Chromecast
+
+#######CUSTOMIZE SWITCHES########
+####RF####
+     switch.bedroom_blinds:
+        friendly_name: Bedroom Blinds
+        icon: mdi:blinds
+     switch.bedroom_fan:
+        friendly_name: Dresser Fan
+        icon: mdi:fan
+     switch.bedroom_lamp:
+        friendly_name: Nightstand Lamp
+        icon: mdi:lightbulb-outline
+     switch.kitchen_blinds:
+        friendly_name: Kitchen Blinds
+        icon: mdi:blinds
+     switch.kitchen_outlet:
+        friendly_name: Outlet
+        icon: mdi:power-socket
+     switch.livingroom_blinds:
+        friendly_name: Living Room Blinds
+        icon: mdi:blinds
+     switch.livingroom_wall_outlet:
+        friendly_name: Ben's Desk Fan
+        icon: mdi:fan
+     switch.livingroom_desk_outlet:
+        friendly_name: Party Globe
+        icon: mdi:cake
+####MEDIA####
+     switch.pc_power:
+        friendly_name: PC Power
+        icon: mdi:monitor
+     switch.tv_input:
+        friendly_name: TV Input
+        icon: mdi:television-guide
+     switch.tv_power:
+        friendly_name: TV Power
+        icon: mdi:television
+     switch.avr_power:
+        friendly_name: AVR Power
+        icon: mdi:television
+####LIGHTS####
+     switch.livingroom_lifx:
+        icon: mdi:lightbulb
+        friendly_name: "LR LIFX IFTTT"
+     switch.bedroom_lifx:
+        icon: mdi:lightbulb
+        friendly_name: "BR LIFX IFTTT"
+     switch.livingroom_hyperion:
+        friendly_name: Hyperion Mood Blue
+        icon: mdi:led-outline
+     switch.wemo_insight_5050_led:
+        friendly_name: Vanity LEDs
+        icon: mdi:led-outline
+####LIGHTS####
+     light.rp2:
+        friendly_name: Hyperion RGB LEDs
+        icon: mdi:led-outline
+     light.br_node_led:
+        friendly_name: Bedroom Node Led
+        icon: mdi:led-outline
+     light.jar_led:
+        friendly_name: Jar LED
+        icon: mdi:led-outline
+     light.party_button:
+        friendly_name:  Party Button LED
+        icon: mdi:led-outline
+     light.lr_door_color_lifx:
+        friendly_name:  Front Door LIFX
+     light.lr_fireplace_color_lifx:
+        friendly_name:  Fireplace LIFX
+     light.br_lifx:
+        friendly_name:  Bedroom LIFX
+####MISC####
+
+########CUSTOMIZE SENSORS########
+####WEATHER####
+     sensor.weather_cloud_coverage:
+        friendly_name: Cloud Coverage
+        icon: mdi:cloud
+     sensor.weather_humidity:
+        friendly_name: Outdoor
+        icon: mdi:water
+     sensor.weather_pressure:
+        friendly_name: Barometric Pressure
+        icon: mdi:nature
+     sensor.weather_temperature:
+        icon: mdi:thermometer
+        friendly_name: Outdoor
+     sensor.weather_wind_speed:
+        icon: mdi:weather-windy
+        friendly_name: Wind Speed
+     sensor.weather_summary:
+        friendly_name: Condition
+     sensor.weather_ozone:
+        friendly_name: Ozone
+     sensor.weather_precip_probability:
+        friendly_name: Precipitation Probability
+     sensor.weather_precip:
+        friendly_name: Precipitation Type
+     sensor.weather_precip_intensity:
+        friendly_name: Precipitation Intensity
+     sensor.weather_visibility:
+        friendly_name: Visibility
+     sensor.weather_nearest_storm:
+        friendly_name: Nearest Storm
+     sensor.weather_wind_bearing:
+        friendly_name: Wind Bearing
+        icon: mdi:compass
+     sensor.weather_apparent_temperature:
+        friendly_name: Real Feel
+####ESP MQTT####
+     sensor.lr_motion:
+        friendly_name: "Living Room Motion"
+        icon: mdi:security
+     sensor.lr_humidity:
+        friendly_name: "Living Room"
+        icon: mdi:water
+     sensor.lr_temperature:
+        friendly_name: "Living Room"
+        icon: mdi:thermometer
+     sensor.lr_light:
+        friendly_name: "Living Room"
+        icon: mdi:brightness-7
+     sensor.br_motion:
+        friendly_name: "Bedroom Motion"
+        icon: mdi:security
+     sensor.br_humidity:
+        friendly_name: "Bedroom"
+        icon: mdi:water
+     sensor.br_temperature:
+        friendly_name: "Bedroom"
+        icon: mdi:thermometer
+     sensor.br_light:
+        friendly_name: "Bedroom"
+        icon: mdi:brightness-7
+     sensor.br_last_sound:
+        friendly_name: "Bedroom Last Sound"
+        icon: mdi:surround-sound
+     sensor.br_clap_sound:
+        friendly_name: "Bedroom Clap Detector"
+        icon: mdi:surround-sound
+     sensor.party_button:
+        friendly_name: "Party Button Status"
+        icon: mdi:cake
+####CELL PHONES####
+     input_select.ben_status:
+        friendly_name: "Ben's Status"
+     sensor.eta_ben:
+        icon: mdi:map
+        friendly_name: "Ben's ETA"
+     sensor.destination_ben:
+        icon: mdi:map-marker
+        friendly_name: "Ben's Destination"
+     input_select.cailin_status:
+        friendly_name: "Cailin's Status"
+     sensor.eta_cailin:
+        icon: mdi:map
+        friendly_name: "Cailin's ETA"
+     sensor.destination_cailin:
+        icon: mdi:map-marker
+        friendly_name: "Cailin's Destination"
+     sensor.ben_nexus_6p_battery:
+        icon: mdi:battery
+        friendly_name: "Ben's Nexus 6P Battery"
+     sensor.cailin_nexus_6p_battery:
+        icon: mdi:battery
+        friendly_name: "Cailin's Nexus 6P Battery"
+####MISC####
+     sensor.date__time:
+        icon: mdi:calendar-clock
+     sensor.cpu_use:
+        icon: mdi:speedometer
+     sensor.ram_free:
+        icon: mdi:poll
+     sensor.disk_free_home:
+        icon: mdi:folder
+        friendly_name: "SD Free"
+     sensor.last_boot:
+        icon: mdi:clock-start
+     sensor.speedtest_ping:
+        icon: mdi:clock
+        friendly_name: "Ping"
+     sensor.speedtest_download:
+        icon: mdi:arrow-down
+        friendly_name: "Download"
+     sensor.speedtest_upload:
+        icon: mdi:arrow-up
+        friendly_name: "Upload"
+########CUSTOMIZE SCRIPTS########
+     script.morning:
+        hidden: true
+     script.alarmaway:
+        hidden: true
+     script.alarmhome:
+        hidden: true
+     script.sunrise:
+        hidden: true
+     script.sunset:
+        hidden: true
+     script.bedtime_cailin:
+        hidden: true
+     script.bedtime_ben:
+        hidden: true
+     script.all_on:
+        friendly_name: "All On"
+        icon: mdi:toggle-switch
+     script.all_on_day:
+        hidden: true
+     script.all_off:
+        friendly_name: "All Off"
+        icon: mdi:toggle-switch-off
+     script.alarmtriggered:
+        hidden: true
+     script.motionlightlr:
+        hidden: true
+     script.timer_lr:
+        hidden: true
+     script.test:
+        hidden: true
+     script.test2:
+        hidden: true
+     script.notifyupdate:
+        hidden: true
+     script.vol_up:
+        hidden: true
+     script.vol_down:
+        hidden: true
+     script.lifx_alert:
+        hidden: true
+     script.lowbattery:
+        hidden: true
+     script.alarmclockmorning:
+        hidden: true
+     script.restart_ha:
+        icon: mdi:power
+        friendly_name: "Restart Home Assistant"
+     script.refresh_devices:
+        friendly_name: "Refresh Device Loc/Bat"
+     script.party_time:
+        friendly_name: "Start Party"
+        icon: mdi:cake
+     script.party_over:
+        friendly_name: "Stop Party"
+        icon: mdi:emoticon-sad
+     script.party_lights_1:
+        hidden: true
+     script.party_lights_2:
+        hidden: true
+     script.sexy_time:
+        friendly_name: "Sexy Time"
+        icon: mdi:human-male-female
+     script.alarmred:
+        friendly_name: "Alarm Red"
+        icon: mdi:alert
+     script.morning_dark:
+        hidden: true
+     script.media_playing_night:
+        friendly_name: "Media Playing Night"
+        icon: mdi:play
+     script.media_stopped_night:
+        friendly_name: "Media Stopped Night"
+        icon: mdi:stop
+     script.prayer_time:
+        icon: mdi:crown
+     script.br_finder:
+        friendly_name: "Ben's Phone Finder"
+        icon: mdi:bell-ring
+     script.cr_finder:
+        friendly_name: "Cailin's Phone Finder"
+        icon: mdi:bell-ring
+     script.car_finder_ben_notify:
+        friendly_name:  "Request Car Location"
+        icon: mdi:map
+     script.car_finder_cailin_notify:
+        friendly_name: "Request Car Location"
+        icon: mdi:map
+########CUSTOMIZE SCENES########
+     scene.vol_up:
+        icon: mdi:volume-high
+        friendly_name: Volume Up
+     scene.vol_down:
+        icon: mdi:volume-low
+        friendly_name: Volume Down
+     scene.blinds_open:
+        icon: mdi:blinds
+     scene.blinds_close:
+        icon: mdi:blinds
+     scene.all_on:
+        icon: mdi:power
+        hidden: true
+     scene.all_off:
+        icon: mdi:power
+        hidden: true
+     scene.lifx_alert:
+        icon: mdi:alert
+        friendly_name: LIFX Alert
+########CUSTOMIZE SCENES########
+     input_select.company:
+        icon: mdi:account-multiple-plus
+     input_select.hyperion_effect:
+        icon: mdi:fire
+        friendly_name: Hyperion Effect
+     input_select.lock_pc:
+        icon: mdi:lock
+     input_select.media_lockout:
+        icon: mdi:lock

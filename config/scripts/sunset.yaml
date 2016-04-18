@@ -1,0 +1,11 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: EVENT
+    message: SUNSET blinds closed
+- execute_service: notify.notify
+  service_data:
+    message: "The sun is setting. Closing blinds."
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: group.rfblinds

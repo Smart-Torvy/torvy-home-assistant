@@ -1,0 +1,7 @@
+alias: "button restart ha"
+trigger:
+  - platform: state
+    entity_id: sensor.party_button
+    state: "Restart HA"
+action:
+  service: script.restart_ha

@@ -1,0 +1,20 @@
+alias: "Media Lights Off While Playing at Night"
+trigger:
+  - platform: state
+    entity_id: media_player.bcrcc
+    state: "playing"
+  - platform: state
+    entity_id: media_player.osmc
+    state: "playing"
+condition:
+  - platform: state
+    entity_id: sun.sun
+    state: "below_horizon"
+  - platform: state
+    entity_id: input_select.media_lockout
+    state: "disabled"
+  - platform: state
+    entity_id: sensor.party_button
+    state: "Standby"
+action:
+  service: script.media_playing_night

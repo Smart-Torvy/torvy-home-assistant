@@ -1,0 +1,17 @@
+sequence:
+- delay:
+    minutes: 1
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    transition: 2
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    transition: 2
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_node_led
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: switch.wemo_insight_5050_led

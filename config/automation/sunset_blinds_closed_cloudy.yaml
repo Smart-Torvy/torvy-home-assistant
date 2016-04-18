@@ -1,0 +1,11 @@
+alias: "Sunset, blinds closed, cloudy"
+trigger:
+  platform: sun
+  event: sunset
+  offset: "-01:30:00"
+condition:
+  - platform: numeric_state
+    entity_id: sensor.weather_cloud_coverage
+    above: 70
+action:
+  service: script.sunset

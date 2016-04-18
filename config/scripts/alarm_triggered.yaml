@@ -1,0 +1,54 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: ALARM EVENT
+    message: Motion detected in living room. Alarm triggered. 
+- execute_service: notify.notify
+  service_data:
+    message: "ALARM - Motion detected in living room. Lights and sound triggered."
+- execute_service: input_select.select_option
+  service_data:
+    entity_id: input_select.hyperion_effect
+    option: Strobe Raspberry
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.jar_led
+    rgb_color: [255,0,0]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_node_led
+    rgb_color: [255,0,0]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_lifx
+    brightness: 255
+    color_temp: 233
+    rgb_color: [255,255,255]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    brightness: 255
+    rgb_color: [255,0,0]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    rgb_color: [255,0,0]
+    brightness: 255
+- delay:
+      minutes: 1
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_door_color_lifx
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_lifx
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_node_led
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.jar_led
+- execute_service: input_select.select_option
+  service_data:
+    entity_id: input_select.hyperion_effect
+    option: "Off"

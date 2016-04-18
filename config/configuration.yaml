@@ -1,0 +1,69 @@
+homeassistant:
+  name: Home
+  latitude: 41.9028
+  longitude: 12.4964
+  temperature_unit: C
+  time_zone: Europe/Rome
+  customize: !include customize.yaml
+
+zone:
+  name: Work
+  latitude: 41.8544
+  longitude: 12.6052
+  radius: 250
+  icon: mdi:worker
+
+#mqtt:
+#  broker: 192.XXX.XXX.XXX
+#  port: XXXX
+#  client_id: home-assistant-1
+#  keepalive: 60
+#  username: XXXXX
+#  password: XXXXX
+
+#http:
+#  api_password: XXXXXXXX
+#  ssl_certificate: '/etc/letsencrypt/live/XXXX.duckdns.org/fullchain.pem'
+#  ssl_key: '/etc/letsencrypt/live/XXXX.duckdns.org/privkey.pem'
+
+#ifttt:
+#  key: XXXXXXXXXX
+
+
+####################################################
+#                                                  #
+#                     Includes             #
+#                                                  #
+####################################################
+
+###  Devices  ###
+camera: !include devices/cameras.yaml
+device_tracker: !include devices/device_trackers.yaml
+light: !include devices/lights.yaml
+media_player: !include devices/media_players.yaml
+sensor: !include devices/sensors.yaml
+switch: !include devices/switches.yaml
+alarm_control_panel: !include alarm_control_panel.yaml
+automation: !include automation.yaml
+group: !include groups.yaml
+input_boolean: !include input_boolean.yaml
+input_select: !include input_select.yaml
+notify: !include notify.yaml
+scene: !include scenes.yaml
+script: !include scripts.yaml
+shell_command: !include shell_commands.yaml
+
+####################################################
+#                                                  #
+#                     Enables             #
+#                                                  #
+####################################################
+logger:
+  logs:
+  default: warning
+frontend:
+history:
+discovery:
+sun:
+conversation:
+logbook:

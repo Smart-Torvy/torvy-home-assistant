@@ -1,0 +1,203 @@
+16-04-18 15:16:41 homeassistant.bootstrap: Error during setup of component logger
+Traceback (most recent call last):
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/bootstrap.py", line 158, in _setup_component
+    if not component.setup(hass, config):
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/logger.py", line 64, in setup
+    for key, value in config.get(DOMAIN)[LOGGER_LOGS].items():
+AttributeError: 'NoneType' object has no attribute 'items'
+16-04-18 15:16:41 homeassistant.bootstrap: component input_boolean failed to initialize
+16-04-18 15:16:41 homeassistant.components.media_player.kodi: Unable to fetch kodi data
+16-04-18 15:16:42 homeassistant.components.notify.pushbullet: Wrong API key supplied. Get it at https://www.pushbullet.com/account
+16-04-18 15:16:42 homeassistant.components.notify: Failed to initialize notification service pushbullet
+16-04-18 15:16:42 homeassistant.bootstrap: component notify failed to initialize
+16-04-18 15:16:42 homeassistant.bootstrap: Error during setup of component mqtt
+Traceback (most recent call last):
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/bootstrap.py", line 158, in _setup_component
+    if not component.setup(hass, config):
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/__init__.py", line 220, in setup
+    password, certificate, protocol)
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/__init__.py", line 300, in __init__
+    self._mqttc.connect(broker, port, keepalive)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/paho/mqtt/client.py", line 611, in connect
+    self.connect_async(host, port, keepalive, bind_address)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/paho/mqtt/client.py", line 669, in connect_async
+    if keepalive < 0:
+TypeError: unorderable types: NoneType() < int()
+16-04-18 15:16:42 homeassistant.bootstrap: Unable to prepare setup for platform light.mqtt because dependency mqtt could not be initialized
+16-04-18 15:16:42 hbmqtt.broker: Broker startup failed: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+16-04-18 15:16:42 homeassistant.components.mqtt.server: Error initializing MQTT server
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 905, in create_server
+    sock.bind(sa)
+OSError: [Errno 48] Address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/hbmqtt/broker.py", line 254, in start
+    loop=self._loop)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/streams.py", line 102, in start_server
+    return (yield from loop.create_server(factory, host, port, **kwds))
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 909, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py", line 48, in start
+    loop.run_until_complete(start_server)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 325, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 295, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 1254, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/events.py", line 125, in _run
+    self._callback(*self._args)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 301, in _wakeup
+    self._step()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py", line 19, in broker_coro
+    yield from broker.start()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/hbmqtt/broker.py", line 276, in start
+    raise BrokerException("Broker instance can't be started: %s" % e)
+hbmqtt.broker.BrokerException: Broker instance can't be started: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+16-04-18 15:16:42 homeassistant.components.mqtt: Unable to start broker and auto-configure MQTT.
+16-04-18 15:16:42 homeassistant.bootstrap: component mqtt failed to initialize
+16-04-18 15:16:42 homeassistant.bootstrap: Unable to prepare setup for platform sensor.mqtt because dependency mqtt could not be initialized
+16-04-18 15:16:42 hbmqtt.broker: Broker startup failed: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+16-04-18 15:16:42 homeassistant.components.mqtt.server: Error initializing MQTT server
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 905, in create_server
+    sock.bind(sa)
+OSError: [Errno 48] Address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/hbmqtt/broker.py", line 254, in start
+    loop=self._loop)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/streams.py", line 102, in start_server
+    return (yield from loop.create_server(factory, host, port, **kwds))
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 909, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py", line 48, in start
+    loop.run_until_complete(start_server)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 325, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 295, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 1254, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/events.py", line 125, in _run
+    self._callback(*self._args)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 301, in _wakeup
+    self._step()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py", line 19, in broker_coro
+    yield from broker.start()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/hbmqtt/broker.py", line 276, in start
+    raise BrokerException("Broker instance can't be started: %s" % e)
+hbmqtt.broker.BrokerException: Broker instance can't be started: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+16-04-18 15:16:42 homeassistant.components.mqtt: Unable to start broker and auto-configure MQTT.
+16-04-18 15:16:42 homeassistant.bootstrap: component mqtt failed to initialize
+16-04-18 15:16:42 homeassistant.bootstrap: Unable to prepare setup for platform device_tracker.owntracks because dependency mqtt could not be initialized
+16-04-18 15:16:42 homeassistant.core: WorkerPool:All 18 threads are busy and 55 jobs pending
+16-04-18 15:16:42 homeassistant.core: WorkerPool:Current job from 15:16:42 18-04-2016: (<function Group._state_changed_listener at 0x1030aad08>, <Event state_changed[L]: old_state=None, entity_id=group.cailin, new_state=<state group.cailin=off; friendly_name=Cailin, assumed_state=True, entity_id=('script.refresh_devices', 'switch.cr_finder', 'input_select.cailin_status', 'sensor.cailin_destination', 'sensor.cailin_eta', 'sensor.cailin_nexus_6p_battery'), order=16 @ 15:16:42 18-04-2016>>)
+16-04-18 15:16:42 homeassistant.core: WorkerPool:Current job from 15:16:42 18-04-2016: (<function Group._state_changed_listener at 0x1030aaf28>, <Event state_changed[L]: old_state=None, entity_id=group.home_assistant_status, new_state=<state group.home_assistant_status=unknown; friendly_name=Home Assistant Status, entity_id=('script.restart_ha', 'sensor.cpu_use', 'sensor.ram_free', 'sensor.disk_free_home', 'sensor.last_boot'), order=18 @ 15:16:42 18-04-2016>>)
+16-04-18 15:16:42 homeassistant.core: WorkerPool:Current job from 15:16:42 18-04-2016: (<function Group._state_changed_listener at 0x1030aaea0>, <Event state_changed[L]: old_state=None, entity_id=group.global, new_state=<state group.global=unknown; friendly_name=Global, entity_id=('script.all_off', 'script.all_on', 'script.sexy_time', 'script.alarmred', 'script.party_time', 'script.party_over'), order=17 @ 15:16:42 18-04-2016>>)
+16-04-18 15:16:42 homeassistant.core: WorkerPool:All 18 threads are busy and 109 jobs pending
+16-04-18 15:16:42 homeassistant.core: WorkerPool:Current job from 15:16:42 18-04-2016: (<function Group._state_changed_listener at 0x1030aaf28>, <Event state_changed[L]: old_state=None, entity_id=group.speedtest, new_state=<state group.speedtest=unknown; friendly_name=Speedtest, entity_id=('sensor.speedtest_ping', 'sensor.speedtest_download', 'sensor.speedtest_upload'), order=24 @ 15:16:42 18-04-2016>>)
+16-04-18 15:16:42 homeassistant.core: WorkerPool:Current job from 15:16:42 18-04-2016: (<function Group._state_changed_listener at 0x1030aab70>, <Event state_changed[L]: old_state=None, entity_id=group.sound, new_state=<state group.sound=unknown; friendly_name=Sound, entity_id=('sensor.br_last_sound', 'sensor.br_clap_sound'), order=23 @ 15:16:42 18-04-2016>>)
+16-04-18 15:16:42 homeassistant.core: WorkerPool:Current job from 15:16:42 18-04-2016: (<function Group._state_changed_listener at 0x1030aabf8>, <Event state_changed[L]: old_state=None, entity_id=group.party, new_state=<state group.party=off; friendly_name=Party, assumed_state=True, entity_id=('light.party_button', 'sensor.party_button', 'switch.livingroom_desk_outlet'), order=22 @ 15:16:42 18-04-2016>>)
+16-04-18 15:16:42 homeassistant.core: WorkerPool:Current job from 15:16:42 18-04-2016: (<function Group._state_changed_listener at 0x1030aab70>, <Event state_changed[L]: old_state=None, entity_id=group.light, new_state=<state group.light=unknown; friendly_name=Light, entity_id=('sensor.br_light', 'sensor.lr_light'), order=21 @ 15:16:42 18-04-2016>>)
+16-04-18 15:16:43 asyncio: Task exception was never retrieved
+future: <Task finished coro=<broker_coro() done, defined at /Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py:14> exception=BrokerException("Broker instance can't be started: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use",)>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 905, in create_server
+    sock.bind(sa)
+OSError: [Errno 48] Address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/hbmqtt/broker.py", line 254, in start
+    loop=self._loop)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/streams.py", line 102, in start_server
+    return (yield from loop.create_server(factory, host, port, **kwds))
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 909, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py", line 48, in start
+    loop.run_until_complete(start_server)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 325, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 295, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 1254, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/events.py", line 125, in _run
+    self._callback(*self._args)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 301, in _wakeup
+    self._step()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py", line 19, in broker_coro
+    yield from broker.start()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/hbmqtt/broker.py", line 276, in start
+    raise BrokerException("Broker instance can't be started: %s" % e)
+hbmqtt.broker.BrokerException: Broker instance can't be started: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+16-04-18 15:16:43 asyncio: Task exception was never retrieved
+future: <Task finished coro=<broker_coro() done, defined at /Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py:14> exception=BrokerException("Broker instance can't be started: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use",)>
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 905, in create_server
+    sock.bind(sa)
+OSError: [Errno 48] Address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/hbmqtt/broker.py", line 254, in start
+    loop=self._loop)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/streams.py", line 102, in start_server
+    return (yield from loop.create_server(factory, host, port, **kwds))
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 909, in create_server
+    % (sa, err.strerror.lower()))
+OSError: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py", line 48, in start
+    loop.run_until_complete(start_server)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 325, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 295, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/base_events.py", line 1254, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/events.py", line 125, in _run
+    self._callback(*self._args)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 301, in _wakeup
+    self._step()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/Users/fana/Smart Torvy/home-assistant/homeassistant/components/mqtt/server.py", line 19, in broker_coro
+    yield from broker.start()
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/hbmqtt/broker.py", line 276, in start
+    raise BrokerException("Broker instance can't be started: %s" % e)
+hbmqtt.broker.BrokerException: Broker instance can't be started: [Errno 48] error while attempting to bind on address ('0.0.0.0', 1883): address already in use
+16-04-18 15:16:43 homeassistant.core: WorkerPool:All 19 threads are busy and 58 jobs pending
+16-04-18 15:16:43 homeassistant.bootstrap: Invalid config for [script]: extra keys not allowed @ data['script']['bedtime_ben']['sequence'][1]['execute_service']

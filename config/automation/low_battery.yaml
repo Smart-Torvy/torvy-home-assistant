@@ -1,0 +1,14 @@
+alias: "low battery RGB lamp"
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.cailin_nexus_6p_battery
+    below: 5
+  - platform: numeric_state
+    entity_id: sensor.ben_nexus_6p_battery
+    below: 5
+condition:
+  - platform: state
+    entity_id: group.all_devices
+    state: "home"
+action:
+  service: script.low_battery

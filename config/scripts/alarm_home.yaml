@@ -1,0 +1,2 @@
+sequence:
+- execute_service: alarm_control_panel.alarm_arm_home

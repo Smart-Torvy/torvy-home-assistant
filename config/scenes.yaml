@@ -1,0 +1,52 @@
+  - name: all on
+    entities:
+      switch.alarm: off
+      switch.bedroom_lamp: on
+      switch.bedroom_lifx: on
+      switch.livingroom_wall_outlet: on
+      light.jar_led: on
+      light.bedroom_color_lifx: on
+      light.living_room_lifx: on
+      switch.wemo_insight_5050_led: on
+      switch.livingroom_desk_outlet: on
+      switch.livingroom_lifx: on
+
+  - name: all off
+    entities:
+      switch.bedroom_lamp: off
+      switch.bedroom_fan: off
+      switch.livingroom_wall_outlet: off
+      light.jar_led: off
+      light.bedroom_color_lifx: off
+      light.living_room_lifx: off
+      switch.wemo_insight_5050_led: off
+      light.rp2: off
+      switch.livingroom_desk_outlet: off
+      light.br_node_led: off
+      switch.tv_power: off
+      switch.alarm: on
+
+  - name: lifx alert
+    entities:
+      script.lifx_alert: on
+
+####ARCHIVED####
+#  - name: blinds open
+#    entities:
+#      switch.bedroom_blinds: on
+#      switch.kitchen_blinds: on
+#      switch.livingroom_blinds: on
+
+#  - name: blinds close
+#    entities:
+#      switch.bedroom_blinds: off
+#      switch.kitchen_blinds: off
+#      switch.livingroom_blinds: off
+
+#  - name: vol up
+#    entities:
+#      script.vol_up: on
+
+#  - name: vol down
+#    entities:
+#      script.vol_down: on

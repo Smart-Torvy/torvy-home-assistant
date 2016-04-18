@@ -1,0 +1,8 @@
+alias: "Ben Car Finder"
+trigger:
+  platform: state
+  entity_id: input_select.ben_status
+  from: "driving"
+  to: "standby"
+action:
+  service: script.refresh_devices

@@ -1,0 +1,7 @@
+alias: "button all off"
+trigger:
+  - platform: state
+    entity_id: sensor.party_button
+    state: "ALARM"
+action:
+  service: script.prayer_time

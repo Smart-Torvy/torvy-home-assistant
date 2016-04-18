@@ -1,0 +1,26 @@
+alias: "Morning dark, lights on"
+trigger:
+  - platform: state
+    entity_id: input_select.ben_status
+    from: "sleeping"
+    to: "standby"
+  - platform: state
+    entity_id: input_select.cailin_status
+    from: "sleeping"
+    to: "standby"
+condition:
+  - platform: time
+    after: '05:00:00'
+  - platform: state
+    entity_id: group.all_devices
+    state: "home"
+  - platform: state
+    entity_id: sun.sun
+    state: "below_horizon"
+  - platform: template
+    value_template: "{% if states('input_select.ben_status') != 'sleeping' and states('input_select.cailin_status') == 'sleeping' %} true {% elif states('input_select.ben_status') == 'sleeping' and states('input_select.cailin_status') != 'sleeping' %} true {% else %} false {% endif %}"
+  - platform: state
+    entity_id: input_select.company
+    state: "disabled"
+action:
+  service: script.morning_dark_one

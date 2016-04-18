@@ -1,0 +1,38 @@
+bedtime_ben: !include scripts/bedtime_ben.yaml
+bedtime_cailin: !include scripts/bedtime_cailin.yaml
+morning: !include scripts/morning.yaml
+morning_dark: !include scripts/morning_dark.yaml
+sunrise: !include scripts/sunrise.yaml
+sunset: !include scripts/sunset.yaml
+alarm_clock_morning: !include scripts/alarm_clock_morning.yaml
+####ALARM ####
+alarm_away:  !include scripts/alarm_away.yaml
+alarm_home:  !include scripts/alarm_home.yaml
+alarm_triggered: !include scripts/alarm_triggered.yaml
+alarm_red: !include scripts/alarm_red.yaml
+####TEST SCRIPTS####
+test: !include scripts/test.yaml
+####GLOBAL SCRIPTS####
+all_off: !include scripts/all_off.yaml
+all_on: !include scripts/all_on.yaml
+all_on_day: !include scripts/all_on_day.yaml
+####TRIGGERED LIGHTS
+motion_light_lr: !include scripts/motion_light_lr.yaml
+timer_lr: !include scripts/timer_lr.yaml
+####NOTIFICATIONS AND ALERTS####
+notify_update: !include scripts/notify_update.yaml
+lifx_alert: !include scripts/lifx_alert.yaml
+low_battery: !include scripts/low_battery.yaml
+restart_ha: !include scripts/restart_ha.yaml
+####PARTY
+party_time: !include scripts/party_time.yaml
+party_over: !include scripts/party_over.yaml
+party_lights_1: !include scripts/party_lights_1.yaml
+party_lights_2: !include scripts/party_lights_2.yaml
+sexy_time: !include scripts/sexy_time.yaml
+refresh_devices: !include scripts/refresh_devices.yaml
+prayer_time: !include scripts/prayer_time.yaml
+####MEDIA####
+media_playing_night: !include scripts/media_playing_night.yaml
+media_stopped_night: !include scripts/media_stopped_night.yaml
+

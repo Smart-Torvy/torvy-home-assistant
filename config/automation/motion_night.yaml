@@ -1,0 +1,13 @@
+alias: "motion light during night time"
+trigger:
+  - platform: state
+    entity_id: sensor.lr_motion
+    state: "motion detected"
+condition:
+  - platform: template
+    value_template: "{% if states('input_select.ben_status') == 'sleeping' or states('input_select.cailin_status') == 'sleeping' %}true{% else %}false{% endif %}"
+  - platform: state
+    entity_id: input_select.company
+    state: "disabled"
+action:
+  service: script.motion_light_lr

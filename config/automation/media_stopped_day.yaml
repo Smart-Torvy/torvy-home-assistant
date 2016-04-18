@@ -1,0 +1,20 @@
+alias: "Blinds Open After Media or Party Button"
+trigger:
+  - platform: state
+    entity_id: media_player.osmc
+    state: "idle"
+    for:
+      minutes: 5
+  - platform: state
+    entity_id: sensor.party_button
+    state: "Standby"
+condition:
+  - platform: state
+    entity_id: sun.sun
+    state: "above_horizon"
+  - platform: state
+    entity_id: input_select.media_lockout
+    state: "disabled"
+action:
+  service: switch.turn_on
+  entity_id: switch.livingroom_blinds

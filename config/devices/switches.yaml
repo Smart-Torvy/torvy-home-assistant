@@ -1,0 +1,51 @@
+- platform: command_line
+  switches:
+    bedroom_fan:
+      oncmd: sudo python /var/opt/homeassistant/HA/rf/rf.py a &
+      offcmd: sudo python /var/opt/homeassistant/HA/rf/rf.py b &
+    bedroom_lamp:
+     oncmd: sudo python /var/opt/homeassistant/HA/rf/rf.py c &
+     offcmd: sudo python /var/opt/homeassistant/HA/rf/rf.py d &
+    livingroom_wall_outlet:
+      oncmd: sudo python /var/opt/homeassistant/HA/rf/rf.py e &
+      offcmd: sudo python /var/opt/homeassistant/HA/rf/rf.py f &
+    livingroom_desk_outlet:
+      oncmd: sudo python /var/opt/homeassistant/HA/rf/rf.py g &
+      offcmd: sudo python /var/opt/homeassistant/HA/rf/rf.py h &
+    kitchen_outlet:
+      oncmd: sudo python /var/opt/homeassistant/HA/rf/rf.py i &
+      offcmd: sudo python /var/opt/homeassistant/HA/rf/rf.py j &
+    bedroom_blinds:
+      oncmd: sudo python /var/opt/homeassistant/HA/rf/rf.py k &
+      offcmd: sudo python /var/opt/homeassistant/HA/rf/rf.py l &
+    kitchen_blinds:
+      oncmd: sudo python /var/opt/homeassistant/HA/rf/rf.py m &
+      offcmd: sudo python /var/opt/homeassistant/HA/rf/rf.py n &
+    livingroom_blinds:
+      oncmd: sudo python /var/opt/homeassistant/HA/rf/rf.py o &
+      offcmd: sudo python /var/opt/homeassistant/HA/rf/rf.py p &
+    pc_power:
+      oncmd: sudo etherwake -b AB:CD:EF:GH:IJ:LK &
+      offcmd: sudo net rpc shutdown -f -t 0 -I 192.XXX.XXX.XXX -U  mywindowsaccountname%mywindowspassword &
+    br_finder:
+      oncmd: "sudo curl 'https://autoremotejoaomgcd.appspot.com/sendmessage?key=randomlongkeystring1234&message=BRringstart&password=mypassword' &"
+      offcmd: "sudo curl 'https://autoremotejoaomgcd.appspot.com/sendmessage?key=randomlongkeystring1234&message=BRringstop&password=mypassword' &"
+    cr_finder:
+      oncmd: "sudo curl 'https://autoremotejoaomgcd.appspot.com/sendmessage?key=randomlongkeystring1234&message=CRringstart&password=mypassword' &"
+      offcmd: "sudo curl 'https://autoremotejoaomgcd.appspot.com/sendmessage?key=randomlongkeystring1234&&message=CRringstop&password=mypassword' &"
+#    livingroom_hyperion:
+#      oncmd: sudo hyperion-remote --priority 50 --effect "Blue mood blobs" &
+#      offcmd: sudo hyperion-remote --priority 50 --clearall &
+#    livingroom_lifx:
+#      oncmd: curl -X POST https://maker.ifttt.com/trigger/{lifx_lr_on}/with/key/randomlongkeystring1234&
+#      offcmd: curl -X POST https://maker.ifttt.com/trigger/{lifx_lr_off}/with/key/randomlongkeystring1234&
+#    bedroom_lifx:
+#      oncmd: curl -X POST https://maker.ifttt.com/trigger/{lifx_br_on}/with/key/randomlongkeystring1234&
+#      offcmd: curl -X POST https://maker.ifttt.com/trigger/{lifx_br_off}/with/key/randomlongkeystring1234&
+#    tv_power:
+#      oncmd: echo "on 0" | cec-client -s &
+#      offcmd: echo "standby 0" | cec-client -s &
+#    avr_power:
+#      oncmd: echo "on 5" | cec-client -s &
+#      offcmd: echo "standby 5" | cec-client -s &
+#      offcmd: echo "standby 5" | cec-client -s &

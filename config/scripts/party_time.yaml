@@ -1,0 +1,23 @@
+sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: UPDATE
+    message: "IT'S PARTY TIME!!"
+- execute_service: notify.notify
+  service_data:
+    message: "IT'S PARTY TIME!!"
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: group.rfblinds
+- execute_service: script.all_off
+- execute_service: shell_command.party_video
+- execute_service: input_select.select_option
+  service_data:
+    entity_id: input_select.hyperion_effect
+    option: Mood Blobs Full Color
+- execute_service: script.turn_on
+  service_data:
+    entity_id: script.party_lights_1
+- execute_service: switch.turn_on
+  service_data:
+    entity_id: switch.livingroom_desk_outlet

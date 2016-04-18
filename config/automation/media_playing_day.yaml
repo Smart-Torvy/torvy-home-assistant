@@ -1,0 +1,15 @@
+alias: "Media Playing Blinds Shut During Day Time"
+trigger:
+  - platform: state
+    entity_id: media_player.osmc
+    state: "playing"
+condition:
+  - platform: time
+    after: "09:00:00"
+    before: "16:00:00"
+  - platform: state
+    entity_id: input_select.media_lockout
+    state: "disabled"
+action:
+  service: switch.turn_off
+  entity_id: switch.livingroom_blinds

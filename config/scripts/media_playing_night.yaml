@@ -1,0 +1,33 @@
+sequence:
+- execute_service: input_select.select_option
+  service_data:
+    entity_id: input_select.hyperion_effect
+    option: "Off"
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_lifx
+    transition: 15
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    brightness: 100
+    color_temp: 233
+    rgb_color: [255,255,255]
+    transition: 15
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    brightness: 100
+    color_temp: 233
+    rgb_color: [255,255,255]
+    transition: 15
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.jar_led
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.rp2
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.rp2
+    rgb_color: [0,0,0]

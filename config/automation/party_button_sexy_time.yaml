@@ -1,0 +1,7 @@
+alias: "button sexy time"
+trigger:
+  - platform: state
+    entity_id: sensor.party_button
+    state: "Sexy Time"
+action:
+  service: script.sexy_time

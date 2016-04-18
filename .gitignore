@@ -1,13 +1,3 @@
-config/*
-!config/home-assistant.conf.default
-
-# There is not a better solution afaik..
-!config/custom_components
-config/custom_components/*
-!config/custom_components/example.py
-!config/custom_components/hello_world.py
-!config/custom_components/mqtt_example.py
-
 tests/config/home-assistant.log
 
 # Hide sublime text stuff

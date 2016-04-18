@@ -1,0 +1,39 @@
+- platform: hyperion
+  host: 192.XXX.XXX.XXXX
+  port: 19444
+##light 2
+- platform: mqtt
+  name: "BR Node LED"
+  command_topic: "HA/node1/setpower"
+  rgb_state_topic: "HA/node1/colorstatus"
+  rgb_command_topic: "HA/node1/setcolor"
+  optimistic: false
+  qos: 1
+##light 3
+- platform: mqtt
+  name: "Jar LED"
+  command_topic: "HA/node2/setpower"
+  rgb_state_topic: "HA/node2/colorstatus"
+  rgb_command_topic: "HA/node2/setcolor"
+  optimistic: false
+  qos: 1
+##light 4
+- platform: lifx
+  server: 192.XXX.XXX.XXX
+  broadcast: 192.168.1.255
+##light 5
+- platform: mqtt
+  name: "Party Button"
+  command_topic: "HA/partybutton/setpower"
+  rgb_state_topic: "HA/partybutton/colorstatus"
+  rgb_command_topic: "HA/partybutton/setcolor"
+  optimistic: false
+  qos: 1
+##light 6
+- platform: mqtt
+  name: "Bathroom LED"
+  command_topic: "HA/node3/setpower"
+  rgb_state_topic: "HA/node3/colorstatus"
+  rgb_command_topic: "HA/node3/setcolor"
+  optimistic: false
+  qos: 1

@@ -1,0 +1,22 @@
+sequence:
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_lifx
+    brightness: 255
+    color_temp: 233
+    rgb_color: [255,255,255]
+    transition: 10
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    brightness: 255
+    color_temp: 233
+    rgb_color: [255,255,255]
+    transition: 10
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    brightness: 255
+    color_temp: 233
+    rgb_color: [255,255,255]
+    transition: 10

@@ -1,0 +1,8 @@
+####MEDIA PLAYERS####
+- platform: kodi
+  url: http://192.XXX.XXX.XXX:80/jsonrpc
+  name: OSMC
+#media_player 2:
+#  platform: kodi
+#  url: http://192.XXX.XXX.XXX:80/jsonrpc
+#  name: KODI Stormtrooper

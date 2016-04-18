@@ -1,0 +1,11 @@
+alias: "Cailin Bed Time"
+trigger:
+  platform: state
+  entity_id: input_select.cailin_status
+  state: "sleeping"
+condition:
+  platform: state
+  entity_id: input_select.company
+  state: "disabled"
+action:
+  service: script.bedtime_cailin

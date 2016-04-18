@@ -1,0 +1,23 @@
+  restart_ha: sudo service hass-daemon restart &
+  ben6p_update: 'mosquitto_pub -d -u bruh2 -P automate -t owntracks/ha/ben6p/cmd -m "{"_type":"cmd","action":"reportLocation"}"'
+  cailin6p_update: 'mosquitto_pub -d -u bruh2 -P automate -t owntracks/ha/cailin6p/cmd -m "{"_type":"cmd","action":"reportLocation"}"'
+  party_video: /home/pi/ha/kodiscript/kodiambilight.sh &
+  sexy_time: /home/pi/ha/kodiscript/sexytime.sh &
+  mood_blobs_blue: sudo hyperion-remote --priority 50 --effect "Blue mood blobs" &
+  knight_rider: sudo hyperion-remote --priority 50 --effect "Knight rider" &
+  mood_blobs_cold: sudo hyperion-remote --priority 50 --effect "Cold mood blobs" &
+  mood_blobs_full_color: sudo hyperion-remote --priority 50 --effect "Full color mood blobs" &
+  mood_blobs_green: sudo hyperion-remote --priority 50 --effect "Green mood blobs" &
+  mood_blobs_red: sudo hyperion-remote --priority 50 --effect "Red mood blobs" &
+  mood_blobs_warm: sudo hyperion-remote --priority 50 --effect "Warm mood blobs" &
+  rainbow_mood: sudo hyperion-remote --priority 50 --effect "Rainbow mood" &
+  rainbow_swirl: sudo hyperion-remote --priority 50 --effect "Rainbow swirl fast" &
+  snake: sudo hyperion-remote --priority 50 --effect "Snake" &
+  strobe_blue: sudo hyperion-remote --priority 50 --effect "Strobe blue" &
+  strobe_raspberry: sudo hyperion-remote --priority 50 --effect "Strobe Raspbmc" &
+  strobe_white: sudo hyperion-remote --priority 50 --effect "Strobe white" &
+  hyperion_off: sudo hyperion-remote --priority 50 --clearall &
+  br_finder: curl -X POST https://maker.ifttt.com/trigger/{find_phone_ben}/with/key/ABC123ABC123
+  cr_finder: curl -X POST https://maker.ifttt.com/trigger/{find_phone_cailin}/with/key/ABC123ABC123
+#  vol_up: sudo python /home/pi/ha/cecscript/volup.py
+#  vol_down: sudo python /home/pi/ha/cecscript/voldown.py

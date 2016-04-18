@@ -1,0 +1,20 @@
+﻿sequence:
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: EVENT
+    message: Alarm Clock Trigger - turning on lights
+- execute_service: notify.notify
+  service_data:
+    message: "Good morning, sunshine!"
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_lifx
+    brightness: 255
+    color_temp: 233
+    transition: 30
+    rgb_color: [255,255,255]
+- delay:
+    seconds: 60
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_lifx

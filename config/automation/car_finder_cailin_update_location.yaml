@@ -1,0 +1,8 @@
+alias: "Cailin Car Finder"
+trigger:
+  platform: state
+  entity_id: input_select.cailin_status
+  from: "driving"
+  to: "standby"
+action:
+  service: script.refresh_devices

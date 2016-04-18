@@ -1,0 +1,35 @@
+sequence:
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_node_led
+    rgb_color: [255,255,0]
+- event: LOGBOOK_ENTRY
+  event_data:
+    name: EVENT
+    message: "Good Morning! Turning bedroom blinds open and fan off." 
+- execute_service: notify.notify
+  service_data:
+    message: "Good Morning! Turning bedroom blinds open and fan off."
+- execute_service: switch.turn_on
+  service_data:
+    entity_id: switch.bedroom_blinds
+- execute_service: switch.turn_off
+  service_data:
+    entity_id: switch.bedroom_fan
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_lifx
+    transition: 2
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    transition: 2
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    transition: 2
+- delay:
+    seconds: 15
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_node_led

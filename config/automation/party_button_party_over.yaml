@@ -1,0 +1,8 @@
+alias: "button party over"
+trigger:
+  - platform: state
+    entity_id: sensor.party_button
+    from: "PARTY TIME"
+    to: "Standby"
+action:
+  service: script.party_over

@@ -1,0 +1,132 @@
+- platform: forecast
+  api_key: XXXXXXXXXXXXXXXXXXXXXXXX
+  monitored_conditions:
+    - summary
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - dew_point
+    - wind_speed
+    - wind_bearing
+    - cloud_cover
+    - humidity
+    - pressure
+    - visibility
+#sensor 2
+- platform: time_date
+  display_options:
+    - "date_time"
+#sensor 3
+- platform: mqtt
+  state_topic: "sensor1/pir"
+  name: "LR Motion"
+  payload_on: "motion detected"
+  payload_off: "standby"
+#sensor 4
+- platform: mqtt
+  state_topic: "sensor1/temperature"
+  name: "LR Temperature"
+  unit_of_measurement: "F"
+  value_template: "{{  value | round(1) }}"
+#sensor 5
+- platform: mqtt
+  state_topic: "sensor1/humidity"
+  name: "LR Humidity"
+  unit_of_measurement: "%"
+  value_template: "{{  value | round(1) }}"
+#sensor 6
+- platform: mqtt
+  state_topic: "sensor1/ldr"
+  unit_of_measurement: "luxv"
+  name: "LR Light"
+  value_template: "{{  value | round(0) }}"
+#sensor 7
+- platform: mqtt
+  state_topic: "ben6p/eta"
+  name: "Ben ETA"
+  qos: 1
+#sensor 8
+- platform: mqtt
+  state_topic: "ben6p/destination"
+  name: "Ben Destination"
+  qos: 1
+#sensor 9
+- platform: mqtt
+  state_topic: "cailin6p/eta"
+  name: "Cailin ETA"
+  qos: 1
+#sensor 10
+- platform: mqtt
+  state_topic: "cailin6p/destination"
+  name: "Cailin Destination"
+  qos: 1
+#sensor 11:
+- platform: mqtt
+  state_topic: "owntracks/HA/ben6p"
+  name: "Ben Nexus 6P Battery"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.batt }}"
+#sensor 12
+- platform: mqtt
+  state_topic: "owntracks/HA/cailin6p"
+  name: "Cailin Nexus 6P Battery"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.batt }}"
+#sensor 13
+- platform: systemmonitor
+  resources:
+    - type: disk_free
+      arg: /home
+    - type: memory_free
+    - type: processor_use
+    - type: last_boot
+#sensor 14
+- platform: mqtt
+  state_topic: "HA/node1/pir"
+  name: "BR Motion"
+  payload_on: "motion detected"
+  payload_off: "standby"
+#sensor 15
+- platform: mqtt
+  state_topic: "HA/node1/temperature"
+  name: "BR Temperature"
+  unit_of_measurement: "F"
+  value_template: "{{  value | round(1) }}"
+#sensor 16
+- platform: mqtt
+  state_topic: "HA/node1/humidity"
+  name: "BR Humidity"
+  unit_of_measurement: "%"
+  value_template: "{{  value | round(1) }}"
+#sensor 17
+- platform: mqtt
+  state_topic: "HA/node1/ldr"
+  unit_of_measurement: "lux"
+  name: "BR Light"
+  value_template: "{{  value | round(0) }}"
+#sensor 18
+- platform: mqtt
+  state_topic: "HA/node1/sound"
+  unit_of_measurement: "dB"
+  name: "BR Last Sound"
+  value_template: "{{  value | round(0) }}"
+#sensor 20
+- platform: mqtt
+  state_topic: "HA/node1/soundclap"
+  name: "BR Clap Sound"
+#sensor 21
+- platform: mqtt
+  state_topic: "HA/partybutton/buttonstatus"
+  name: "Party Button"
+#sensor 22
+- platform: speedtest
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+#sensor 23
+- platform: torque
+  name: car
+  email: XXXXXXXXXX@gmail.com

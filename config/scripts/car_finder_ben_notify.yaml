@@ -1,0 +1,9 @@
+sequence:
+- execute_service: notify.notify
+  service_data:
+    message: >
+      {%- if is_state("sensor.car_driving_ben", "Prius") -%} 
+        The Prius is located at https://maps.google.com/maps?q={{states.device_tracker.bruh2_prius.attributes.latitude}},{{ states.device_tracker.bruh2_prius.attributes.longitude}}  GPS Accuracy: {{states.device_tracker.bruh2_prius.attributes.gps_accuracy}} meters 
+      {%- elif is_state("sensor.car_driving_ben", "Civic")  -%} 
+        The Civic is located at https://maps.google.com/maps?q={{states.device_tracker.bruh2_civic.attributes.latitude}},{{ states.device_tracker.bruh2_civic.attributes.longitude}}  GPS Accuracy: {{states.device_tracker.bruh2_civic.attributes.gps_accuracy}} meters 
+      {%- endif %}

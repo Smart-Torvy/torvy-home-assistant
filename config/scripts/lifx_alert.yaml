@@ -1,0 +1,138 @@
+sequence:
+- execute_service: notify.notify
+  service_data:
+    message: "LIFX Alert Triggered"
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.jar_led
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.rp2
+- execute_service: input_select.select_option
+  service_data:
+    entity_id: input_select.hyperion_effect
+    option: "Off"
+- delay:
+    milliseconds: 500
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.jar_led
+    rgb_color: [255,0,255]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.rp2
+    rgb_color: [255,0,255]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_node_led
+    rgb_color: [255,0,255]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    rgb_color: [255,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    rgb_color: [255,0,255]
+    brightness: 255
+- delay:
+    milliseconds: 500
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.jar_led
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.rp2
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_door_color_lifx
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_node_led
+- delay:
+    milliseconds: 500
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.jar_led
+    rgb_color: [255,0,255]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.rp2
+    rgb_color: [255,0,255]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    rgb_color: [255,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    rgb_color: [255,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_node_led
+    rgb_color: [255,0,255]
+- delay:
+    milliseconds: 500
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.jar_led
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.rp2
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_door_color_lifx
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_node_led
+- delay:
+    milliseconds: 500
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.jar_led
+    rgb_color: [255,0,255]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.rp2
+    rgb_color: [255,0,255]
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_door_color_lifx
+    rgb_color: [255,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+    rgb_color: [255,0,255]
+    brightness: 255
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.br_node_led
+    rgb_color: [255,0,255]
+- delay:
+    seconds: 3
+- execute_service: light.turn_on
+  service_data:
+    entity_id: light.jar_led
+    rgb_color: [255,255,255]
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.rp2
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_door_color_lifx
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.lr_fireplace_color_lifx
+- execute_service: light.turn_off
+  service_data:
+    entity_id: light.br_node_led
