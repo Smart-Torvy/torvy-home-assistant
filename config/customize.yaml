@@ -19,25 +19,25 @@
 #######CUSTOMIZE SWITCHES########
 ####RF####
      switch.bedroom_blinds:
-        friendly_name: Bedroom Blinds
+        friendly_name: Serrande Camera
         icon: mdi:blinds
      switch.bedroom_fan:
-        friendly_name: Dresser Fan
+        friendly_name: Ventilatore Armadio
         icon: mdi:fan
      switch.bedroom_lamp:
-        friendly_name: Nightstand Lamp
+        friendly_name: Lampada Comodino
         icon: mdi:lightbulb-outline
      switch.kitchen_blinds:
-        friendly_name: Kitchen Blinds
+        friendly_name: Serrande Cucina
         icon: mdi:blinds
      switch.kitchen_outlet:
         friendly_name: Outlet
         icon: mdi:power-socket
      switch.livingroom_blinds:
-        friendly_name: Living Room Blinds
+        friendly_name: Serrande Salotto
         icon: mdi:blinds
      switch.livingroom_wall_outlet:
-        friendly_name: Ben's Desk Fan
+        friendly_name: Ventilatore Scrivania
         icon: mdi:fan
      switch.livingroom_desk_outlet:
         friendly_name: Party Globe

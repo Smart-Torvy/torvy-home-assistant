@@ -1,4 +1,5 @@
 ####MEDIA PLAYERS####
+# Ran by using Kodi: https://kodi.tv/
 - platform: kodi
   url: http://192.XXX.XXX.XXX:80/jsonrpc
   name: OSMC
