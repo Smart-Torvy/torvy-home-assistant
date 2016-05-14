@@ -4,7 +4,6 @@ default_view:
     - group.alarm_status
     - group.bathroom
     - group.bedroom
-    - group.cameras
     - group.living_room
     - group.kitchen
     - group.rfblinds
@@ -64,7 +63,7 @@ scenes:
   view: yes
   entities:
     - group.global
- 
+
 ha_status:
   name: HA Controls
   view: yes
@@ -96,7 +95,7 @@ Bedroom:
     - switch.bedroom_lifx
     - light.br_node_led
 
-RFBlinds: 
+RFBlinds:
     - switch.bedroom_blinds
     - switch.kitchen_blinds
     - switch.livingroom_blinds
@@ -140,10 +139,10 @@ Humidity:
    - sensor.weather_humidity
    - sensor.lr_humidity
    - sensor.br_humidity
- 
+
 Kitchen Lights:
     - switch.kitchen_outlet
-   
+
 Light:
    - sensor.br_light
    - sensor.lr_light
@@ -152,7 +151,7 @@ Party:
    - light.party_button
    - sensor.party_button
    - switch.livingroom_desk_outlet
- 
+
 Sound:
    - sensor.br_last_sound
    - sensor.br_clap_sound
