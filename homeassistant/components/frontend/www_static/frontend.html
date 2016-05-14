@@ -764,7 +764,7 @@ font-style: italic;
     --paper-light-blue-200: #81d4fa;
     --paper-light-blue-300: #4fc3f7;
     --paper-light-blue-400: #29b6f6;
-    --paper-light-blue-500: #03a9f4;
+    --paper-light-blue-500: #55c45e;
     --paper-light-blue-600: #039be5;
     --paper-light-blue-700: #0288d1;
     --paper-light-blue-800: #0277bd;
@@ -2981,7 +2981,7 @@ font-style: italic;
     position: relative;
     display: inline-block;
     width: 40px;
-    color: #44739E;
+    color: #006009;
     border-radius: 50%;
     height: 40px;
     text-align: center;
@@ -6318,7 +6318,7 @@ case"touchend":return this.addPointerListenerEnd(t,e,i,n);case"touchmove":return
     .camera-image {
       width: 100%;
     }</style><template><img class="camera-image" src="[[computeCameraImageUrl(stateObj)]]" on-load="imageLoaded"></template></dom-module><dom-module id="more-info-updater" assetpath="more-infos/"><style is="custom-style" include="iron-flex"></style><style>.link {
-      color: #03A9F4;
+      color: #55c45e;
     }</style><template><div class="layout vertical"><a class="link" href="https://home-assistant.io/getting-started/#updating" target="_blank">Update Instructions</a></div></template></dom-module><dom-module id="more-info-alarm_control_panel" assetpath="more-infos/"><style is="custom-style" include="iron-flex"></style><template><div class="layout horizontal"><paper-input label="code" value="{{enteredCode}}" pattern="[[codeFormat]]" type="password" hidden="[[!codeInputVisible]]" disabled="[[!codeInputEnabled]]"></paper-input></div><div class="layout horizontal"><paper-button on-tap="handleDisarmTap" hidden="[[!disarmButtonVisible]]" disabled="[[!codeValid]]">Disarm</paper-button><paper-button on-tap="handleHomeTap" hidden="[[!armHomeButtonVisible]]" disabled="[[!codeValid]]">Arm Home</paper-button><paper-button on-tap="handleAwayTap" hidden="[[!armAwayButtonVisible]]" disabled="[[!codeValid]]">Arm Away</paper-button></div></template></dom-module><dom-module id="more-info-lock" assetpath="more-infos/"><style>paper-input {
       display: inline-block;
     }</style><template><div hidden="[[!stateObj.attributes.code_format]]"><paper-input label="code" value="{{enteredCode}}" pattern="[[stateObj.attributes.code_format]]" type="password"></paper-input><paper-button on-tap="handleUnlockTap" hidden$="[[!isLocked]]">Unlock</paper-button><paper-button on-tap="handleLockTap" hidden$="[[isLocked]]">Lock</paper-button></div></template></dom-module><dom-module id="more-info-content" assetpath="more-infos/"><style>:host {
@@ -6535,8 +6535,8 @@ case"touchend":return this.addPointerListenerEnd(t,e,i,n);case"touchmove":return
       opacity: var(--dark-secondary-opacity);
     }</style><template><paper-header-panel mode="scroll" class="sidenav fit"><paper-toolbar><div class="title">Home Assistant</div><paper-icon-button icon="mdi:chevron-left" hidden$="[[narrow]]" on-tap="toggleMenu"></paper-icon-button></paper-toolbar><paper-menu attr-for-selected="data-panel" selected="[[selected]]" on-iron-select="menuSelect"><paper-icon-item on-tap="menuClicked" data-panel="states"><iron-icon item-icon="" icon="mdi:apps"></iron-icon><span class="item-text">States</span></paper-icon-item><paper-icon-item on-tap="menuClicked" data-panel="map"><iron-icon item-icon="" icon="mdi:account-location"></iron-icon><span class="item-text">Map</span></paper-icon-item><template is="dom-if" if="[[hasHistoryComponent]]"><paper-icon-item on-tap="menuClicked" data-panel="history"><iron-icon item-icon="" icon="mdi:poll-box"></iron-icon><span class="item-text">History</span></paper-icon-item></template><template is="dom-if" if="[[hasLogbookComponent]]"><paper-icon-item on-tap="menuClicked" data-panel="logbook"><iron-icon item-icon="" icon="mdi:format-list-bulleted-type"></iron-icon><span class="item-text">Logbook</span></paper-icon-item></template><paper-icon-item on-tap="menuClicked" data-panel="logout" class="logout"><iron-icon item-icon="" icon="mdi:exit-to-app"></iron-icon><span class="item-text">Log Out</span></paper-icon-item></paper-menu><div><div class="divider"></div><paper-item class="horizontal layout justified"><div class="streaming">Streaming updates</div><stream-status></stream-status></paper-item><div class="divider"></div><div class="subheader">Developer Tools</div><div class="dev-tools layout horizontal justified"><paper-icon-button icon="mdi:remote" data-panel="devService" on-tap="menuClicked"></paper-icon-button><paper-icon-button icon="mdi:code-tags" data-panel="devState" on-tap="menuClicked"></paper-icon-button><paper-icon-button icon="mdi:radio-tower" data-panel="devEvent" on-tap="menuClicked"></paper-icon-button><paper-icon-button icon="mdi:file-xml" data-panel="devTemplate" on-tap="menuClicked"></paper-icon-button><paper-icon-button icon="mdi:information-outline" data-panel="devInfo" on-tap="menuClicked"></paper-icon-button></div></div></paper-header-panel></template></dom-module><dom-module id="home-assistant-main" assetpath="layouts/"><template><notification-manager></notification-manager><more-info-dialog></more-info-dialog><ha-voice-command-dialog></ha-voice-command-dialog><iron-media-query query="(max-width: 870px)" query-matches="{{narrow}}"></iron-media-query><paper-drawer-panel id="drawer" force-narrow="[[computeForceNarrow(narrow, showSidebar)]]" responsive-width="0" disable-swipe="[[isSelectedMap]]" disable-edge-swipe="[[isSelectedMap]]"><ha-sidebar drawer="" narrow="[[narrow]]"></ha-sidebar><template is="dom-if" if="[[isSelectedStates]]"><partial-cards main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-cards></template><template is="dom-if" if="[[isSelectedLogbook]]"><partial-logbook main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-logbook></template><template is="dom-if" if="[[isSelectedHistory]]"><partial-history main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-history></template><template is="dom-if" if="[[isSelectedMap]]"><partial-map main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-map></template><template is="dom-if" if="[[isSelectedDevService]]"><partial-dev-call-service main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-dev-call-service></template><template is="dom-if" if="[[isSelectedDevEvent]]"><partial-dev-fire-event main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-dev-fire-event></template><template is="dom-if" if="[[isSelectedDevState]]"><partial-dev-set-state main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-dev-set-state></template><template is="dom-if" if="[[isSelectedDevTemplate]]"><partial-dev-template main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-dev-template></template><template is="dom-if" if="[[isSelectedDevInfo]]"><partial-dev-info main="" narrow="[[narrow]]" show-menu="[[showSidebar]]"></partial-dev-info></template></paper-drawer-panel></template></dom-module><style is="custom-style">:root {
     --dark-primary-color: #0288D1;
-    --default-primary-color: #03A9F4;
-    --primary-color: #03A9F4;
+    --default-primary-color: #55c45e;
+    --primary-color: #55c45e;
     --light-primary-color: #B3E5FC;
     --text-primary-color: #ffffff;
     --accent-color: #FF9800;
@@ -6550,7 +6550,7 @@ case"touchend":return this.addPointerListenerEnd(t,e,i,n);case"touchmove":return
     --paper-toggle-button-checked-button-color: #039be5;
     --paper-toggle-button-checked-bar-color: #039be5;
 
-    --paper-toolbar-background: #03A9F4;
+    --paper-toolbar-background: #55c45e;
 
     font-size: 14px;
   }

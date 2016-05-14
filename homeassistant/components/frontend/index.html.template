@@ -11,7 +11,7 @@
     <meta name='apple-mobile-web-app-capable' content='yes'>
     <meta name='mobile-web-app-capable' content='yes'>
     <meta name='viewport' content='width=device-width, user-scalable=no'>
-    <meta name='theme-color' content='#03a9f4'>
+    <meta name='theme-color' content='#55c45e'>
     <style>
       #ha-init-skeleton {
         display: -webkit-flex;
