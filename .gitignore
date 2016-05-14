@@ -71,3 +71,7 @@ venv
 # vimmy stuff
 *.swp
 *.swo
+
+config/home-assistant.log
+
+config/home-assistant.db
