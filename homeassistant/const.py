@@ -1,26 +1,24 @@
 # coding: utf-8
 """Constants used by Home Assistant components."""
 MAJOR_VERSION = 0
-MINOR_VERSION = 31
-PATCH_VERSION = '0.dev0'
+MINOR_VERSION = 1
+PATCH_VERSION = ''
 __short_version__ = '{}.{}'.format(MAJOR_VERSION, MINOR_VERSION)
-__version__ = '{}.{}'.format(__short_version__, PATCH_VERSION)
+__version__ = __short_version__
 REQUIRED_PYTHON_VER = (3, 4, 2)
 
-PROJECT_NAME = 'Home Assistant'
-PROJECT_PACKAGE_NAME = 'homeassistant'
+PROJECT_NAME = 'Torvy Home Assistant'
+PROJECT_PACKAGE_NAME = 'torvy-hass'
 PROJECT_LICENSE = 'MIT License'
-PROJECT_AUTHOR = 'The Home Assistant Authors'
+PROJECT_AUTHOR = 'Smart Torvy Team'
 PROJECT_COPYRIGHT = ' 2016, {}'.format(PROJECT_AUTHOR)
-PROJECT_URL = 'https://home-assistant.io/'
-PROJECT_EMAIL = 'hello@home-assistant.io'
+PROJECT_URL = 'http://smarttorvy.me/'
+PROJECT_EMAIL = 'hello@smarttorvy.me'
 PROJECT_DESCRIPTION = ('Open-source home automation platform '
                        'running on Python 3.')
 PROJECT_LONG_DESCRIPTION = ('Home Assistant is an open-source '
                             'home automation platform running on Python 3. '
-                            'Track and control all devices at home and '
-                            'automate control. '
-                            'Installation in less than a minute.')
+                            'This is a fork developed by Smart Torvy.' )
 PROJECT_CLASSIFIERS = [
     'Intended Audience :: End Users/Desktop',
     'Intended Audience :: Developers',
@@ -30,8 +28,8 @@ PROJECT_CLASSIFIERS = [
     'Topic :: Home Automation'
 ]
 
-PROJECT_GITHUB_USERNAME = 'home-assistant'
-PROJECT_GITHUB_REPOSITORY = 'home-assistant'
+PROJECT_GITHUB_USERNAME = 'smart-torvy'
+PROJECT_GITHUB_REPOSITORY = 'torvy-home-assistant'
 
 PYPI_URL = 'https://pypi.python.org/pypi/{}'.format(PROJECT_PACKAGE_NAME)
 GITHUB_PATH = '{}/{}'.format(PROJECT_GITHUB_USERNAME,
